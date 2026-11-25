@@ -3,3 +3,6 @@
 *.tfstate.*
 crash.log
 *.tfvars
+*.pem
+kubeconfig*
+.DS_Store

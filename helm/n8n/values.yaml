@@ -1,0 +1,53 @@
+# Valores editables del release. El script scripts/deploy-n8n.sh
+# sobreescribe host, URL, EFS y secretos con las salidas de Terraform.
+
+timezone: America/Bogota
+
+image:
+  repository: n8nio/n8n
+  tag: latest
+
+service:
+  port: 5678
+  nodePort: 30678
+
+publicHost: ""
+publicUrl: ""
+
+database:
+  host: ""
+  port: 5432
+  name: n8n
+  user: n8n
+
+redis:
+  host: ""
+  port: 6379
+  tls: true
+
+efs:
+  dnsName: ""
+  size: 5Gi
+
+secrets:
+  dbPassword: ""
+  redisPassword: ""
+  encryptionKey: ""
+
+main:
+  replicas: 1
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 1Gi
+
+worker:
+  replicas: 1
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      memory: 1Gi

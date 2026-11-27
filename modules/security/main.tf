@@ -1,5 +1,5 @@
 resource "aws_security_group" "master" {
-  name_prefix = "sg-master-${terraform.workspace}-"
+  name_prefix = "sec-master-${terraform.workspace}-"
   description = "Master de k3s"
   vpc_id      = var.vpc_id
 
@@ -21,7 +21,7 @@ resource "aws_security_group" "master" {
 }
 
 resource "aws_security_group" "worker" {
-  name_prefix = "sg-worker-${terraform.workspace}-"
+  name_prefix = "sec-worker-${terraform.workspace}-"
   description = "Workers de k3s"
   vpc_id      = var.vpc_id
 

@@ -5,7 +5,7 @@ resource "random_password" "auth" {
 }
 
 resource "aws_security_group" "redis" {
-  name_prefix = "sg-redis-${terraform.workspace}-"
+  name_prefix = "sec-redis-${terraform.workspace}-"
   description = "Redis de n8n"
   vpc_id      = var.vpc_id
 

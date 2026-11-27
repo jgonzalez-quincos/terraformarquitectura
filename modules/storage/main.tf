@@ -1,5 +1,5 @@
 resource "aws_security_group" "efs" {
-  name_prefix = "sg-efs-${terraform.workspace}-"
+  name_prefix = "sec-efs-${terraform.workspace}-"
   description = "NFS hacia EFS desde los nodos de k3s"
   vpc_id      = var.vpc_id
 

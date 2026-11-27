@@ -5,7 +5,7 @@ resource "random_password" "db" {
 }
 
 resource "aws_security_group" "rds" {
-  name_prefix = "sg-rds-${terraform.workspace}-"
+  name_prefix = "sec-rds-${terraform.workspace}-"
   description = "PostgreSQL de n8n"
   vpc_id      = var.vpc_id
 
